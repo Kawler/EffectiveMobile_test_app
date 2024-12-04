@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@color/grey2"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_back"
+            android:background="@android:color/transparent"
+            app:tint="@color/blue"
+            android:layout_gravity="center_vertical"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingEnd="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/flight_details_tv_route"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Москва-Сочи"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/flight_details_route_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23 февраля, 1 пассажир"
+                android:textColor="@color/grey6" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Your existing RecyclerView and other elements -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/flight_details_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <!-- Floating buttons -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/floatingButtonsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom||center_horizontal"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/blue">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/flight_details_btn_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:maxLines="1"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:insetTop="6dp"
+                    app:icon="@drawable/ic_configure"
+                    app:iconPadding="0dp"
+                    android:insetBottom="6dp"
+                    android:textAppearance="@style/ButtonText1"
+                    android:background="@android:color/transparent"
+                    android:text="Фильтр"
+                    android:textColor="@android:color/white" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/flight_details_btn_chart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:maxLines="1"
+                    android:paddingTop="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    android:insetTop="7dp"
+                    android:insetBottom="7dp"
+                    app:icon="@drawable/ic_chart"
+                    app:iconPadding="0dp"
+                    android:textAppearance="@style/ButtonText1"
+                    android:background="@android:color/transparent"
+                    android:text="График цен"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+</LinearLayout>

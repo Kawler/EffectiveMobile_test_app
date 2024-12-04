@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_main_tickets">
+
+    <fragment
+        android:id="@+id/navigation_main_tickets"
+        android:name="com.kawler.effmobile.ui.main_tickets.MainTickets"
+        android:label="Авиабилеты"
+        tools:layout="@layout/fragment_main_tickets"/>
+    <fragment
+        android:id="@+id/navigation_hotels"
+        android:name="com.kawler.effmobile.ui.hotels.HotelsFragment"
+        android:label="Отели"
+        tools:layout="@layout/fragment_hotels" />
+    <fragment
+        android:id="@+id/navigation_shorter"
+        android:name="com.kawler.effmobile.ui.shorter.ShorterFragment"
+        android:label="Короче"
+        tools:layout="@layout/fragment_shorter" />
+    <fragment
+        android:id="@+id/navigation_subscriptions"
+        android:name="com.kawler.effmobile.ui.subscricptions.SubscriptionsFragment"
+        android:label="Подписки"
+        tools:layout="@layout/fragment_subscriptions" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.kawler.effmobile.ui.profile.ProfileFragment"
+        android:label="Профиль"
+        tools:layout="@layout/fragment_profile" />
+
+
+</navigation>
