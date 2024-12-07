@@ -2,6 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.navigation.safe.args)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.parcelize)
 }
 
 android {
@@ -10,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId = "com.kawler.effmobile"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -20,7 +23,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -52,7 +56,18 @@ dependencies {
     implementation(libs.androidx.legacy.support.v4)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.recyclerview)
+    implementation(libs.retrofit)
+    implementation(libs.adapterdelegates4.kotlin.dsl)
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.activity)
+    annotationProcessor(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.gson.converter)
+    ksp(libs.hilt.android.compiler)
     testImplementation(libs.junit)
+    implementation(libs.appintro)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }

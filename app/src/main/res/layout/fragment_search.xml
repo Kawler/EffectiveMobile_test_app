@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_fragment"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/black2"
-    tools:context=".ui.search.SearchFragment">
+    android:background="@android:color/transparent"
+    tools:context=".ui.fragments.search.SearchFragment">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -41,6 +42,9 @@
                         android:text="Минск"
                         android:textColorHint="@color/white"
                         android:padding="5dp"
+                        android:maxLines="1"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp"
                         android:drawableStart="@drawable/ic_plane"
@@ -73,8 +77,11 @@
                         android:layout_width="match_parent"
                         android:hint="Куда - Турция"
                         android:padding="5dp"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp"
+                        android:maxLines="1"
                         android:drawableStart="@drawable/ic_search"
                         android:drawableTint="@color/white"
                         android:drawablePadding="5dp"
@@ -92,8 +99,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:orientation="horizontal">
 
         <!-- First Button + Text -->
         <LinearLayout
@@ -116,7 +124,7 @@
                 android:text="Сложный маршурт"
                 android:gravity="center"
                 android:textColor="@android:color/white"
-                style="@style/Text1" />
+                style="@style/Text3" />
         </LinearLayout>
 
         <LinearLayout
@@ -139,7 +147,7 @@
                 android:text="Куда угодно"
                 android:gravity="center"
                 android:textColor="@android:color/white"
-                style="@style/Text1" />
+                style="@style/Text3" />
         </LinearLayout>
 
         <LinearLayout
@@ -162,7 +170,7 @@
                 android:text="Выходные"
                 android:gravity="center"
                 android:textColor="@android:color/white"
-                style="@style/Text1" />
+                style="@style/Text3" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
@@ -184,7 +192,7 @@
                 android:text="Горячие билеты"
                 android:gravity="center"
                 android:textColor="@android:color/white"
-                style="@style/Text1" />
+                style="@style/Text3" />
         </LinearLayout>
     </LinearLayout>
 

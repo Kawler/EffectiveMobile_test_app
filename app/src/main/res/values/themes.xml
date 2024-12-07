@@ -7,6 +7,8 @@
         <item name="android:textColorPrimary">@color/white</item>
         <item name="android:textColorSecondary">@color/grey6</item>
         <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:fitsSystemWindows">true</item>
     </style>
 
     <style name="Title1">
@@ -56,4 +58,18 @@
         <item name="fontFamily">@font/sf_pro_regular</item>
         <item name="android:textSize">10sp</item>
     </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet_modal</item>
+    </style>
+
+    <style name="ThemeOverlay.App.DatePicker" parent="@style/ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorPrimary">@color/black2</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
 </resources>

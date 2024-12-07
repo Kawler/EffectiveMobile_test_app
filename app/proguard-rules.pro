@@ -19,3 +19,31 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Keep Hilt-generated components and injects
+-keep class dagger.hilt.** { *; }
+-keep class androidx.hilt.** { *; }
+-dontwarn dagger.hilt.**
+-dontwarn androidx.hilt.**
+
+# Room Database classes
+-keep class androidx.room.** { *; }
+-dontwarn androidx.room.**
+
+# Retrofit and Gson
+-keep class retrofit2.** { *; }
+-keep interface retrofit2.** { *; }
+-keep class com.google.gson.** { *; }
+-keep interface com.google.gson.** { *; }
+-keep class retrofit2.converter.gson.GsonConverterFactory { *; }
+
+# Gson (to ensure correct serialization/deserialization)
+-keep class com.google.gson.stream.** { *; }
+-dontwarn com.google.gson.**
+-keep class com.kawler.effmobile.domain.models.** { *; }
+
+# AppIntro
+-keep class me.relex.circleindicator.** { *; }
+-keep class com.github.paolorotolo.appintro.** { *; }
+-dontwarn me.relex.circleindicator.**
+-dontwarn com.github.paolorotolo.appintro.**

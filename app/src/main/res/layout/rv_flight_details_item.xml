@@ -2,13 +2,13 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="8dp">
+    android:paddingTop="5dp"
+    android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         app:cardCornerRadius="8dp"
         app:cardBackgroundColor="@color/grey2">
 
@@ -16,29 +16,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="20dp">
 
             <TextView
-                android:id="@+id/priceText"
+                android:id="@+id/rv_flight_details_item_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="6 990 ₽"
                 android:textColor="@android:color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textAppearance="@style/Title1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:layout_gravity="center_vertical"
                     android:id="@+id/redCircle"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_marginEnd="8dp"
-                    android:src="@drawable/red_circle" />
+                    android:src="@drawable/ic_company"
+                    app:tint="@color/red" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -52,21 +54,25 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/timeText"
-                            android:layout_width="0dp"
+                            android:id="@+id/rv_flight_details_item_time"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="03:15 — 07:10"
+                            android:paddingEnd="5dp"
                             android:textColor="@android:color/white"
-                            android:textSize="14sp" />
+                            android:textAppearance="@style/ButtonText1" />
 
                         <TextView
-                            android:id="@+id/detailsText"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/rv_flight_details_item_details"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="10dp"
+                            android:ellipsize="end"
+                            android:paddingEnd="5dp"
                             android:layout_height="wrap_content"
                             android:text="4ч в пути / Без пересадок"
                             android:textColor="@android:color/white"
-                            android:textSize="12sp" />
+                            android:textAppearance="@style/Text3" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -74,21 +80,24 @@
                         android:orientation="horizontal"
                         android:layout_height="wrap_content">
                         <TextView
-                            android:id="@+id/bottomText"
+                            android:id="@+id/rv_flight_details_item_departure"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="VKO    AER"
-                            android:textColor="@android:color/white"
-                            android:textSize="14sp" />
+                            android:text="VKO"
+                            android:paddingEnd="5dp"
+                            android:textColor="@color/grey6"
+                            android:textAppearance="@style/ButtonText1"/>
                         <TextView
-                            android:id="@+id/bottomText"
+                            android:id="@+id/rv_flight_details_item_arrival"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="VKO    AER"
-                            android:textColor="@android:color/white"
-                            android:textSize="14sp" />
+                            android:text="AER"
+                            android:paddingEnd="10dp"
+                            android:layout_marginStart="25dp"
+                            android:textColor="@color/grey6"
+                            android:textAppearance="@style/ButtonText1" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -96,23 +105,23 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/tagCard"
+        android:id="@+id/rv_flight_details_item_tag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|start"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         app:cardCornerRadius="16dp"
         app:cardBackgroundColor="@color/blue">
 
         <TextView
-            android:id="@+id/tagText"
+            android:id="@+id/rv_flight_details_item_tag_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingHorizontal="8dp"
             android:paddingVertical="4dp"
             android:text="Самый удобный"
             android:textColor="@android:color/white"
-            android:textSize="12sp" />
+            android:textAppearance="@style/ButtonText1" />
     </com.google.android.material.card.MaterialCardView>
 </FrameLayout>

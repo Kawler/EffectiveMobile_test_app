@@ -3,11 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.hotels.HotelsFragment">
+    tools:context=".ui.fragments.hotels.HotelsFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:textAppearance="@style/Title1"
+        android:text="Заглушка" />
 
 </FrameLayout>

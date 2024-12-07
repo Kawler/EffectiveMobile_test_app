@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:background="@color/grey2"
     android:orientation="vertical"
+    android:padding="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <LinearLayout
     android:layout_width="match_parent"
@@ -19,6 +20,7 @@
             android:id="@+id/rv_search_cities_img"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:scaleType="fitXY"
             android:contentDescription="city image" />
     </com.google.android.material.card.MaterialCardView>
 
@@ -39,13 +41,13 @@
             style="@style/Text2"
             android:text="Стамбул"/>
         <TextView
-            android:id="@+id/rv_search_cities_name"
+            android:id="@+id/rv_search_cities_description"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
             android:paddingBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/grey10"
+            android:textColor="@color/grey5"
             android:maxLines="1"
             android:ellipsize="end"
             style="@style/Text3"
@@ -58,5 +60,6 @@
         android:layout_height="1dp"
         android:layout_marginStart="2dp"
         android:layout_marginEnd="2dp"
+        android:layout_marginTop="4dp"
         android:background="@color/grey10"/>
 </LinearLayout>

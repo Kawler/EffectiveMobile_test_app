@@ -7,29 +7,78 @@
 
     <fragment
         android:id="@+id/navigation_main_tickets"
-        android:name="com.kawler.effmobile.ui.main_tickets.MainTickets"
+        android:name="com.kawler.effmobile.ui.fragments.main_tickets.MainTickets"
         android:label="Авиабилеты"
-        tools:layout="@layout/fragment_main_tickets"/>
+        tools:layout="@layout/fragment_main_tickets">
+        <action
+            android:id="@+id/action_navigation_main_tickets_to_hotTicketsFragment"
+            app:destination="@id/hotTicketsFragment" />
+        <action
+            android:id="@+id/action_navigation_main_tickets_to_hardRouteFragment"
+            app:destination="@id/hardRouteFragment" />
+        <action
+            android:id="@+id/action_navigation_main_tickets_to_weekendsFragment"
+            app:destination="@id/weekendsFragment" />
+        <action
+            android:id="@+id/action_navigation_main_tickets_to_searchChosenFragment"
+            app:destination="@id/searchChosenFragment" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_hotels"
-        android:name="com.kawler.effmobile.ui.hotels.HotelsFragment"
+        android:name="com.kawler.effmobile.ui.fragments.hotels.HotelsFragment"
         android:label="Отели"
         tools:layout="@layout/fragment_hotels" />
     <fragment
         android:id="@+id/navigation_shorter"
-        android:name="com.kawler.effmobile.ui.shorter.ShorterFragment"
+        android:name="com.kawler.effmobile.ui.fragments.shorter.ShorterFragment"
         android:label="Короче"
         tools:layout="@layout/fragment_shorter" />
     <fragment
         android:id="@+id/navigation_subscriptions"
-        android:name="com.kawler.effmobile.ui.subscricptions.SubscriptionsFragment"
+        android:name="com.kawler.effmobile.ui.fragments.subscricptions.SubscriptionsFragment"
         android:label="Подписки"
         tools:layout="@layout/fragment_subscriptions" />
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.kawler.effmobile.ui.profile.ProfileFragment"
+        android:name="com.kawler.effmobile.ui.fragments.profile.ProfileFragment"
         android:label="Профиль"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/hotTicketsFragment"
+        android:name="com.kawler.effmobile.ui.fragments.hot_tickets.HotTicketsFragment"
+        android:label="fragment_hot_tickets"
+        tools:layout="@layout/fragment_hot_tickets" />
+    <fragment
+        android:id="@+id/hardRouteFragment"
+        android:name="com.kawler.effmobile.ui.fragments.hard_route.HardRouteFragment"
+        android:label="fragment_hard_route"
+        tools:layout="@layout/fragment_hard_route" />
+    <fragment
+        android:id="@+id/searchChosenFragment"
+        android:name="com.kawler.effmobile.ui.fragments.search_chosen.SearchChosenFragment"
+        android:label="fragment_search_chosen"
+        tools:layout="@layout/fragment_search_chosen" >
+        <action
+            android:id="@+id/action_searchChosenFragment_to_allTicketsFragment"
+            app:destination="@id/allTicketsFragment" />
+        <argument
+            android:name="destination"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/weekendsFragment"
+        android:name="com.kawler.effmobile.ui.fragments.weekends.WeekendsFragment"
+        android:label="fragment_weekends"
+        tools:layout="@layout/fragment_weekends" />
+    <fragment
+        android:id="@+id/allTicketsFragment"
+        android:name="com.kawler.effmobile.ui.fragments.alltickets.AllTicketsFragment"
+        android:label="fragment_all_tickets"
+        tools:layout="@layout/fragment_all_tickets" >
+        <argument
+            android:name="TicketSetting"
+            app:argType="com.kawler.effmobile.domain.models.TicketSettings" />
+    </fragment>
 
 
 </navigation>

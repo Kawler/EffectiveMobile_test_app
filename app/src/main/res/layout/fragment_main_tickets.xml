@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.main_tickets.MainTickets">
+    tools:context=".ui.fragments.main_tickets.MainTickets">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,7 +21,7 @@
                     android:layout_height="wrap_content"
                     android:text="Поиск дешевых авиабилетов"
                     android:textAlignment="center"
-                    android:textColor="@color/grey6"/>
+                    android:textColor="@color/grey11"/>
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
@@ -98,9 +98,9 @@
                         style="@style/Title1"/>
 
                 <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/main_tickets_rv_"
+                        android:id="@+id/main_tickets_rv"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
         </LinearLayout>
 </ScrollView>

@@ -11,6 +11,7 @@ pluginManagement {
             id("androidx.navigation.safeargs.kotlin") version "2.8.4"
         }
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
         gradlePluginPortal()
     }
 }
@@ -19,6 +20,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
